@@ -4,10 +4,15 @@ using System.Text;
 
 namespace ConsoleApp2.model
 {
-    public class Songs
+    public partial class Song
     {
-        public virtual albums_songs song_id { get; set; }
-        public string song_title { get; set; }
-        public string song_duration { get; set; }
+        public Song()
+        {
+            Albums_Songs = new HashSet<Album_song>();
+        }
+        public int Song_ID { get; set; }
+        public string Song_Title { get; set; }
+        public virtual ICollection<Album_song> Albums_Songs { get; set; }
+        public int Duration { get; set; }
     }
 }
