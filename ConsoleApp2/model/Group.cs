@@ -8,7 +8,6 @@ namespace ConsoleApp2.model
     {
         public int Artist_ID { get; set; }
         public string Group_Name { get; set; }
-        public virtual Album IdArtistNavigation { get; set; }
-
+        public virtual Artist IdArtistNavigation { get; set; }
     }
 }
