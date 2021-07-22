@@ -184,6 +184,8 @@ namespace ExamWork.DataAccess
                 entity.Property(e => e.Duration)
                     .HasColumnName("Duration");
             });
+            OnModelCreatingPartial(modelBuilder);
         }
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
